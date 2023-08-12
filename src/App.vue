@@ -1,26 +1,43 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="app">
+    <AppHeader />
+    <AppBanner />
+    <RepositoriesGrid />
+    <RepositoryDetail/>
+    <UserProfile/>
+    <ExploreSection/>
+    <AppFooter />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppHeader from "@/components/AppHeader.vue";
+import AppBanner from "@/components/AppBanner.vue";
+import RepositoriesGrid from "@/components/RepositoriesGrid.vue";
+import RepositoryDetail from "./components/RepositoryDetail.vue";
+import UserProfile from "./components/UserProfile.vue";
+import ExploreSection from "./components/ExploreSection.vue";
+import AppFooter from "@/components/AppFooter.vue";
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    AppHeader,
+    AppBanner,
+    RepositoriesGrid,
+    RepositoryDetail,
+    UserProfile,
+    ExploreSection,
+    AppFooter,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+/* Basic styling for the app container */
+.app {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  /* Add more styles as needed */
 }
 </style>
